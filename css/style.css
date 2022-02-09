@@ -1,0 +1,144 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+   in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  background-color: darkcyan;
+/* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+main{
+  background-color: white;
+  display: grid;
+  height: 200px;
+  width: 400px;
+  border: transparent 1px rgba(0, 139, 139, .01);
+  grid-template-columns: 30% 70%;
+  grid-template-rows:  5% 10% 10% 10% 15% 5% 10% 15% 5% 15%;
+  grid-template-areas:
+  "status name"
+  "img name"
+  "img name"
+  "img occupation"
+  "img occupation"
+  "img  brand"
+  "img  brand"
+  "img  brand"
+  "contact offer"
+  "contact offer";
+}
+
+#status{
+  background-color: white;
+  color: gray;
+  grid-area: status;
+  padding: 5px 0 0 10px;
+  min-height: 20px;
+}
+
+#name, #brand, #offer, #occupation{
+  background-color: rgb(238, 238, 238);
+  padding: 0 0 0 15px;
+}
+
+p{
+  margin: 0;
+}
+
+#name{
+  grid-area: name;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 10px 0 0 15px;
+}
+
+#occupation{
+  grid-area: occupation;
+  margin: 0;
+}
+
+#occupation > p {
+  padding: 2px 0;
+  font-size: 1.4rem;
+  color: rgb(77, 86, 95);
+}
+
+#brand{
+  grid-area: brand;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  color: gray;
+}
+
+#brand > p{
+padding: 0 0 0 15px;
+border-left:solid rgb(33, 192, 33);
+}
+
+#offer{
+  grid-area: offer;
+  padding: 5px 0 0 15px;
+  margin: 0;
+  align-items: center;
+}
+
+img{
+  background-color: white;
+  max-width: 70%;
+  border-radius: 50%;
+  border: solid 2px rgb(33, 192, 33);
+  grid-area: img;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}
+
+#contact{
+  background-color: green;
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+#contact > p {
+  text-align: center;
+}
+
+#phone {
+  padding: 12px 0; 
+  background-color: lightgreen;
+}
+
+
+@media screen only that {max-width:400 }
+
