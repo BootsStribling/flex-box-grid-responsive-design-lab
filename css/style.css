@@ -30,6 +30,80 @@ body {
 }
 
 main{
+    background-color: white;
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+#status{
+  text-align: right;
+  color: grey;
+}
+
+img{
+  border-radius: 50%;
+  border:rgb(33, 192, 33) solid 2px;
+  max-width: 50%;
+  margin: 0 auto 15px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+h1, #occupation, #offer{
+  text-align: center;
+}
+
+#occupation{
+  background-color: rgb(238, 238, 238);
+}
+
+#brand{
+  display: none;
+}
+
+#offer{
+  line-height: 1px;
+  margin: 5px;
+}
+
+#contact{
+  background-color: green;
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+#contact > p {
+  text-align: center;
+  margin: 0;
+}
+
+#phone{
+  padding: 8px 0;
+  background-color: lightgreen;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px){
+  
+
+main{
   background-color: white;
   display: grid;
   width: 400px;
@@ -49,7 +123,12 @@ main{
   "contact offer";
 }
 
+h1{
+  font-size: 20px;
+}
+
 #status{
+  text-align: left;
   background-color: white;
   color: gray;
   grid-area: status;
@@ -58,6 +137,7 @@ main{
 }
 
 #name, #brand, #offer, #occupation{
+  text-align: left;
   background-color: rgb(238, 238, 238);
   padding: 0 0 0 15px;
 }
@@ -105,6 +185,8 @@ border-left:solid rgb(33, 192, 33);
   padding: 5px 0 0 15px;
   margin: 0;
   align-items: center;
+  justify-content: center;
+  line-height: 10px;
 }
 
 img{
@@ -136,10 +218,4 @@ img{
   background-color: lightgreen;
 }
 
-
-@media only screen and (max-width: 600px){
-  body{
-    
-  }
 }
-
